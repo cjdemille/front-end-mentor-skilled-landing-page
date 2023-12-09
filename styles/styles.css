@@ -1,0 +1,201 @@
+:root {
+    --mdBlue: #666CA3;
+    --darkBlue: #13183F;
+    --gray: #83869A;
+    --hotPink: #F74780;
+    --ltPink: #FFA7C3;
+    --white: #fff;
+    --orangeToPink: linear-gradient(#FF6F48, #F02AA6);
+    --orangeToPinkAlpha: linear-gradient(#FF6F4880, #F02AA680);
+    --purpleToPink: linear-gradient(#4851FF, #F02AA6)
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(var(--white), #F0F1FF);
+    color: var(--gray);
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+a {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 1.5rem;
+}
+
+.btn {
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    color: var(--white);
+}
+
+.btn:hover,
+a:hover {
+    transition: .2s;
+    cursor: pointer;
+    filter: opacity(50%);
+}
+
+
+nav .btn {
+    background-color: var(--darkBlue);
+}
+
+nav .btn:hover {
+    background-color: var(--mdBlue);
+}
+
+
+.jumbo article {
+    padding: 1rem 1.5rem;
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 70px;
+    color: var(--darkBlue);
+    margin: 1.5rem auto;
+}
+
+.jumbo p {
+    margin: 3rem 0;
+}
+
+.jumbo .btn {
+    background: var(--orangeToPink);
+    padding: 1rem 3rem;
+    margin: 1.5rem 0px;
+}
+
+.jumbo .btn:hover {}
+
+.jumbo img {
+    width: 100%;
+}
+
+.courses {
+
+    padding-bottom: 2rem;
+}
+
+.card {
+    background-color: var(--white);
+    margin: 3rem 2rem;
+    border-radius: 1rem;
+}
+
+.card-body {
+    position: relative;
+    top: -3.5rem;
+}
+
+.card a {
+    display: block;
+    color: var(--hotPink)
+}
+
+article.card {
+    padding: 2rem 2rem 0;
+}
+
+h2 {
+    background: var(--orangeToPink);
+    color: var(--white);
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 40px;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--darkBlue);
+    font-weight: 900;
+    margin: 1rem 0;
+}
+
+footer {
+    background-color: var(--darkBlue);
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+
+}
+
+footer .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .btn {
+    background: var(--purpleToPink);
+    padding: 1rem 3rem;
+}
+
+.tablet {
+    display: none;
+}
+
+@media screen and (min-width:768px) {
+
+    .mobile {
+        display: none;
+    }
+
+    .tablet {
+        display: inline-block;
+        right: -5rem;
+    }
+
+    .jumbo {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .courses {
+        display: flex;
+        flex-wrap: wrap;
+        /* align-items: center; */
+        justify-content: center;
+        max-width: 1314px;
+        margin: 0 auto;
+
+    }
+
+    .card {
+        width: 38%;
+        display: inline-flex;
+        margin: 3rem 1%;
+    }
+}
+
+@media screen and (min-width:1280px) {
+
+    .card {
+        width: 20%;
+        display: inline-flex;
+        margin: 3rem 1rem;
+    }
+
+    header {
+        max-width: 1314px;
+        margin: 0 auto;
+    }
+}
