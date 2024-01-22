@@ -17,6 +17,9 @@ body {
     font-size: 18px;
     line-height: 28px;
     font-weight: 500;
+    overflow-x: hidden;
+    position: relative;
+
 }
 
 a {
@@ -78,11 +81,6 @@ h1 {
     margin: 1.5rem 0px;
 }
 
-.jumbo .btn:hover {}
-
-.jumbo img {
-    width: 100%;
-}
 
 .courses {
 
@@ -148,46 +146,24 @@ footer .btn {
     padding: 1rem 3rem;
 }
 
-.tablet {
-    display: none;
-}
-
-.desktop {
-    display: none;
-}
-
 @media screen and (min-width:768px) {
-
-    .mobile {
-        display: none;
-    }
-
-    .tablet {
-        display: inline-block;
-        /* right: -5rem;
-        max-width: 100%;
-        border-radius: 20px; */
-    }
-
-    img.tablet {
-        /* border: 1px solid red; */
-        position: relative;
-        right: -13rem;
-        top: -5rem;
-        z-index: 12;
-    }
 
     .jumbo {
         display: flex;
-        margin: 0;
-        padding: 0;
+        margin-bottom: 12rem;
         width: 100%;
-        overflow: hidden;
         align-items: center;
     }
 
+    .jumbo-image {
+        width: 70%;
+        position: absolute;
+        top: -3rem;
+        right: -27%;
+    }
+
     .jumbo article {
-        max-width: 70%;
+        max-width: 50%;
     }
 
     .courses {
@@ -207,13 +183,14 @@ footer .btn {
     }
 }
 
-@media screen and (min-width:1280px) {
-    .tablet {
-        display: none;
-    }
+@media screen and (min-width:1440px) {
 
-    .desktop {
-        display: inline-block;
+    .jumbo-image {
+        position: absolute;
+        width: 60%;
+        top: -9%;
+        right: -20%;
+        max-width: 880px;
     }
 
     .jumbo {
